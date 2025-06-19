@@ -1,0 +1,49 @@
+/* style.css */
+
+/* Define a fonte Inter para todo o corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Efeito de hover personalizado para os cards de projeto */
+.project-card:hover .project-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Transições suaves para todos os elementos para animações mais fluidas */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilos para o overlay do modal */
+.modal-overlay {
+    /* Tailwind classes: hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 */
+    /* Estas classes já cobrem a maioria, mas garantimos aqui */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    /* Tailwind classes: bg-gray-800 rounded-lg p-6 relative w-full max-w-4xl max-h-[90vh] overflow-auto */
+    /* Ajustes para centralização e scroll interno se o conteúdo for muito grande */
+}
+
+/* Container responsivo para vídeos (16:9 aspect ratio) */
+.video-container {
+    position: relative;
+    width: 100%;
+    /* padding-bottom: 56.25%; for 16:9 aspect ratio (height / width = 9 / 16 = 0.5625) */
+    padding-bottom: 56.25%; /* Isso garante a proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
